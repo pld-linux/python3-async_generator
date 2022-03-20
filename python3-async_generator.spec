@@ -1,13 +1,13 @@
 #
 # Conditional build:
-%bcond_without	doc	# don't build doc
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	doc	# Sphinx documentation
+%bcond_without	tests	# unit tests
 
 Summary:	Async generators and context managers for Python 3.5+
 Summary(pl.UTF-8):	Asynchroniczne generatory i zarządcy kontekstu dla Pythona 3.5+
 Name:		python3-async_generator
 Version:	1.10
-Release:	1.1
+Release:	2
 License:	Apache v2.0 or MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/async_generator/
@@ -15,7 +15,6 @@ Source0:	https://files.pythonhosted.org/packages/source/a/async_generator/async_
 # Source0-md5:	078a29b4afb3d7f38c097a530f042a55
 URL:		https://pypi.org/project/async_generator/
 BuildRequires:	python3-modules >= 1:3.5
-BuildRequires:	python3-modules < 1:3.7
 BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-pytest
@@ -61,6 +60,7 @@ Dokumentacja API async_generator.
 %py3_build
 
 %if %{with tests}
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 %{__python3} -m pytest async_generator/_tests
 %endif
 
