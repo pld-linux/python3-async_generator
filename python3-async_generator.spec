@@ -23,6 +23,7 @@ BuildRequires:	python3-pytest-cov
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
+BuildRequires:	python3-sphinxcontrib-trio
 BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python3-modules >= 1:3.5
