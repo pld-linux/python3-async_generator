@@ -7,7 +7,7 @@ Summary:	Async generators and context managers for Python 3.5+
 Summary(pl.UTF-8):	Asynchroniczne generatory i zarządcy kontekstu dla Pythona 3.5+
 Name:		python3-async_generator
 Version:	1.10
-Release:	4
+Release:	5
 License:	Apache v2.0 or MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/async_generator/
